@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>MDB Webpack Starter</title>
+  <!-- Favicon -->
+  <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+  <!-- Main css file -->
+  <link rel="stylesheet" href="css/index.min.css" />
+  <!-- Custom styles -->
+  <style> .vw-40 { width: 40vw; } </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!-- Container wrapper -->
+    <div class="container-fluid">
+      <!-- Navbar brand -->
+      <a class="navbar-brand" href="#">Do przeczytania</a>
+      <!-- Toggle button -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-mdb-toggle="collapse"
+        data-mdb-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+
+
+      <!-- Collapsible wrapper -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- Left links -->
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+          <!-- Navbar dropdown -->
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-mdb-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Dodaj książkę
+            </a>
+            <!-- Dropdown menu -->
+            <div class="dropdown-menu p-4 vw-40" aria-labelledby="navbarDropdown">
+              <form class="">
+                <div class="form-group p-0">
+                  <label for="book-title">Tytuł</label>
+                  <input type="text" class="form-control" id="book-title" placeholder="np. Mały Książę">
+                </div>
+                <div class="form-group">
+                  <label for="book-author">Autor</label>
+                  <input type="text" class="form-control" id="book-author"
+                         placeholder="np. Antoine de Saint-Exupéry">
+                </div>
+                <div class="form-group">
+                  <label for="book-category">Kategoria</label>
+                  <select class="form-control" id="book-category">
+                    <option>Kryminał</option>
+                    <option>Sci-Fi</option>
+                    <option>Fantasy</option>
+                    <option>Poezja</option>
+                    <option>Dramat</option>
+                    <option>Nauki ścisłe</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="book-priority">Priorytet</label>
+                  <select multiple class="form-control" id="book-priority">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+                </div>
+                <button type="submit" class="btn-lg btn-primary">Dodaj!</button>
+              </form>
+            </div>
+          </li>
+          <li>
+            <div class="dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="categoryCountDropdown"
+                role="button"
+                data-mdb-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Licznik kategorii
+              </a>
+              <ul id="categoryCounter" class="dropdown-menu" aria-labelledby="categoryCountDropdown">
+                <li class="dropdown-item">Kryminał</li>
+                <li class="dropdown-item">Sci-Fi</li>
+                <li class="dropdown-item">Fantasy</li>
+                <li class="dropdown-item">Poezja</li>
+                <li class="dropdown-item">Dramat</li>
+                <li class="dropdown-item">Nauki ścisłe</li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>//doesn't work :(</li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+        <!-- Left links -->
+
+        <!-- Search form -->
+
+      </div>
+      <!-- Collapsible wrapper -->
+    </div>
+    <!-- Container wrapper -->
+  </nav>
+  <!-- Navbar -->
+  <div class="container-fluid">
+
+    <h1 class="text-center">Książki do przeczytania</h1>
+
+    <table class="table  table-striped">
+      <thead class="table-dark">
+      <tr>
+        <th>#</th>
+        <th>Tytuł</th>
+        <th>Autor</th>
+        <th>
+          <div class="dropdown">
+            <button
+              class="btn btn-outline-light dropdown-toggle"
+              type="button"
+              id="categoryDropdownMenuButton"
+              data-mdb-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Kategoria
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="categoryDropdownMenuButton">
+              <li><a class="dropdown-item category" href="#">Kryminał</a></li>
+              <li><a class="dropdown-item category" href="#">Sci-Fi</a></li>
+              <li><a class="dropdown-item category" href="#">Fantasy</a></li>
+              <li><a class="dropdown-item category" href="#">Poezja</a></li>
+              <li><a class="dropdown-item category" href="#">Dramat</a></li>
+              <li><a class="dropdown-item category" href="#">Nauki ścisłe</a></li>
+            </ul>
+          </div>
+        </th>
+        <th>
+          Priorytet
+        </th>
+        <th>Usuń</th>
+      </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+
+
+
+  </div>
+  <!-- End your project here-->
+
+</body>
+<!-- Main js file -->
+<script type="text/javascript" src="js/index.min.js"></script>
+<!-- Custom scripts -->
+<script type="text/javascript"></script>
+
+</html>
